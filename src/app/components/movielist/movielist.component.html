@@ -1,0 +1,12 @@
+
+<div>
+
+    <h3>Movies List</h3>
+
+    <p *ngIf="movies.length === 0"> Movies not avialble </p>
+    <div class="row">
+        <div *ngFor = "let movie of movies" class="col-md-4 col-sm-12">
+            <app-movie [movie]="movie"></app-movie>
+        </div>
+    </div>
+</div>

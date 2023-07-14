@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  userData:any;
 
+ 
+  ngOnInit(){
+    this.userData = localStorage.getItem("userData") != null ?
+     JSON.parse(this.userData) : {};
+  }
 }

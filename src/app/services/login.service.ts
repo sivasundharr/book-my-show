@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import LoginData from '../model/LoginData';
 
 @Injectable({
   providedIn: 'root'
@@ -10,9 +11,9 @@ export class LoginService {
 
   constructor(private httpClient:HttpClient) { }
 
-  loginUser(userData:any){
+  loginUser(loginData:LoginData){
 
-    return this.httpClient.post(`${this.URL}/login`,userData);
+    return this.httpClient.post(`${this.URL}/login`,loginData);
 
   }
 

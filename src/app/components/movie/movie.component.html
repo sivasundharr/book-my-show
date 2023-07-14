@@ -1,0 +1,11 @@
+
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{movie.name}}</h5>
+      <p class="card-text">Cinema : {{ movie.screen.cinema.type}}</p>
+      <p class="card-text">Screen : {{ movie.screen.type}}</p>
+      <p class="card-text">ShowCycle : {{ movie.showCycle}}</p>
+      <p class="card-text">releaseDate : {{ movie.releaseDate }}</p>
+      <a [routerLink]="['/']" class="btn btn-primary">Book Ticket</a>
+    </div>
+  </div>

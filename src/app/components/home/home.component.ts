@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  userData:any;
 
+ 
+  ngOnInit(){
+    this.userData = localStorage.getItem("userData") != null ?
+     JSON.parse(this.userData) : {};
+
+  }
+ 
 }
