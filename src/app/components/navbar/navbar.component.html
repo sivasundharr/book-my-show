@@ -11,6 +11,8 @@
           <a class="nav-link" [routerLink]="['/movies']" routerLinkActive="router-link-active" >Movies</a>
           
           <a *ngIf="userData===null" class="nav-link" [routerLink]="['/login']" routerLinkActive="router-link-active" >Login</a>
+
+          <a *ngIf="userData!==null" class="btn btn-primary" (click)="logOut()" >Logout</a>
         </div>
       </div>
     </div>

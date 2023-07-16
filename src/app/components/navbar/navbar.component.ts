@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,11 +8,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  userData:any;
+  
+  userData:any =  this.authService.getUserData();
 
+  constructor(private router:Router,private authService:AuthService){
+  
+  }
+
+  logOut(){
+    this.authService.logOut();
+    this.userData = this.authService.getUserData();
+    this.router.navigate(['/login']);
+  }
  
   ngOnInit(){
-    this.userData = localStorage.getItem("userData") != null ?
-     JSON.parse(this.userData) : {};
+    this.userData = this.authService.getUserData();
   }
+  
 }

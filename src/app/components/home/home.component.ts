@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -8,11 +9,12 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   userData:any;
 
- 
-  ngOnInit(){
-    this.userData = localStorage.getItem("userData") != null ?
-     JSON.parse(this.userData) : {};
-
+  constructor(private authService:AuthService){
+      this.userData = this.authService.getUserData();
   }
- 
+  
+  ngOnInit(){
+    
+  
+  }
 }

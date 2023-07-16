@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { catchError, of, throwError } from 'rxjs';
-import { LoginService } from 'src/app/services/login.service';
+import { UserService } from 'src/app/services/user.service';
 
 import LoginData from '../../model/LoginData';
 import { HttpErrorResponse } from '@angular/common/http';
@@ -19,7 +19,7 @@ export class LoginComponent {
     constructor(
       private fb:FormBuilder,
       private router:Router,
-      private loginService:LoginService){}
+      private loginService:UserService){}
 
     onSubmit(data:LoginData):void{
 

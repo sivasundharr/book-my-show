@@ -5,7 +5,7 @@ import LoginData from '../model/LoginData';
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
+export class UserService {
 
    private URL:String="http://localhost:8082/user";
 
