@@ -10,9 +10,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MovielistComponent } from './components/movielist/movielist.component';
 import { MovieComponent } from './components/movie/movie.component';
-import { BookingListComponent } from './components/tickets-list/booking-list.component';
-import { TicketBookingComponent } from './components/ticket/ticket-booking.component';
-import { TicketBookingFormComponent } from './components/ticket-booking/ticket-booking-form.component';
+import { BookingListComponent } from './components/booking-list/booking-list.component';
+import { BookingComponent } from './components/booking/booking.component';
+import { BookingFormComponent } from './components/booking-form/booking-form.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +23,8 @@ import { TicketBookingFormComponent } from './components/ticket-booking/ticket-b
     MovielistComponent,
     MovieComponent,
     BookingListComponent,
-    TicketBookingComponent,
-    TicketBookingFormComponent
+    BookingComponent,
+    BookingFormComponent
   ],
   imports: [
     BrowserModule,
