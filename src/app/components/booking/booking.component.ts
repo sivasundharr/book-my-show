@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import BookingData from 'src/app/model/BookingData';
 
 @Component({
   selector: 'app-booking',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class BookingComponent {
 
+  @Input("booking") booking = {};
 }
